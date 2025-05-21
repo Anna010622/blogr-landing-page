@@ -1,0 +1,33 @@
+:root {
+	--desktop: 1440px;
+	--mobile: 375px;
+
+	/* Fonts */
+	--ff-main: 'Ubuntu', sans-serif;
+	--ff-alt: 'Overpass', sans-serif;
+
+	--fs-base: calc(14 / 16 * 1rem);
+	--fs-h1: calc(24 / 16 * 1rem);
+	--fs-h2: calc(18 / 16 * 1rem);
+	--fs-h3: calc(18 / 16 * 1rem);
+	--fs-subheading: calc(14 / 16 * 1rem);
+
+	/* Primary */
+	--clr-primary: hsl(356, 100%, 66%);
+	--clr-primary-ltr: hsl(355, 100%, 74%);
+	--clr-primary-dk: hsl(208, 49%, 24%);
+
+	/* Neutral */
+	--clr-ntrl-dk: hsl(240, 10%, 16%);
+	--clr-ntrl-ltr: hsl(207, 13%, 34%);
+	--clr-ntrl-lt: hsl(0, 100%, 100%);
+}
+
+@media (width > 375px) {
+	:root {
+		--fs-h1: calc(46 / 16 * 1rem);
+		--fs-h2: calc(28 / 16 * 1rem);
+		--fs-h3: calc(20 / 16 * 1rem);
+		--fs-subheading: calc(16 / 16 * 1rem);
+	}
+}

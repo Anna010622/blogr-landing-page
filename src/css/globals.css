@@ -1,0 +1,60 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	color-scheme: light;
+}
+
+body {
+	min-height: 100vh;
+
+	font-family: var(--ff-main);
+	font-size: var(--fs-base);
+	line-height: 1.5;
+	color: var(--clr-ntrl-dk);
+	text-align: center;
+
+	background-color: var(--clr-ntrl-lt);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-top: 0;
+	text-wrap: balance;
+}
+
+h1 {
+	font-size: var(--fs-h1);
+}
+
+h2 {
+	font-size: var(--fs-h2);
+}
+
+h3 {
+	font-size: var(--fs-h3);
+}
+
+p,
+figcaption,
+li {
+	text-wrap: pretty;
+}
+
+.container {
+	--padding: 1rem;
+
+	width: min(var(--desktop), 100% - var(--padding) * 2);
+	margin-inline: auto;
+}
+
+.sub-heading {
+	font-size: var(--fs-sub-heading);
+}

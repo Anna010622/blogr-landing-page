@@ -1,0 +1,46 @@
+/* .menu {
+	margin: 0;
+	inset: auto;
+	right: 50px;
+	top: 50px;
+
+	max-width: 300px;
+	max-height: 100px;
+	width: 300px;
+	height: 100px;
+	border: 3px solid palevioletred;
+
+	opacity: 0;
+	transform: scale(0);
+	transition: opacity 0.7s ease-out, transform 0.7s ease-out,
+		overlay 0.7s ease-out allow-discrete, display 0.7s ease-out allow-discrete;
+}
+
+.menu:open {
+	opacity: 1;
+	transform: scale(1);
+}
+@starting-style {
+	dialog:open {
+		opacity: 0;
+		transform: scale(0);
+	}
+}
+
+.menu::backdrop {
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgb(0 0 0 / 0%);
+	transition: display 0.7s allow-discrete, overlay 0.7s allow-discrete,
+		background-color 0.7s;
+}
+.menu:open::backdrop {
+	background-color: rgb(0 0 0 / 75%);
+}
+@starting-style {
+	.menu:open::backdrop {
+		background-color: rgb(0 0 0 / 0%);
+	}
+} */
