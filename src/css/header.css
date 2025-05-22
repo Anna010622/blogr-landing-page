@@ -1,4 +1,25 @@
+header {
+	position: absolute;
+	width: 100%;
+	padding: 48px 0;
+	color: var(--clr-ntrl-lt);
+}
+
 header .container {
+	position: relative;
 	display: flex;
 	justify-content: space-between;
+}
+
+.menu {
+	position: absolute;
+	top: 84px;
+	width: 100%;
+	border-radius: 4px;
+	background-color: var(--clr-ntrl-lt);
+}
+
+.open-menu {
+	border: 0;
+	background-color: transparent;
 }

@@ -1,46 +1,28 @@
-/* .menu {
-	margin: 0;
-	inset: auto;
-	right: 50px;
-	top: 50px;
-
-	max-width: 300px;
-	max-height: 100px;
-	width: 300px;
-	height: 100px;
-	border: 3px solid palevioletred;
-
-	opacity: 0;
-	transform: scale(0);
-	transition: opacity 0.7s ease-out, transform 0.7s ease-out,
-		overlay 0.7s ease-out allow-discrete, display 0.7s ease-out allow-discrete;
+.hero {
+	color: var(--clr-ntrl-lt);
+	border-bottom-left-radius: 25%;
+	background-image: url('../images/bg-pattern-intro-mobile.svg'),
+		linear-gradient(to bottom right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+	background-position: center;
+	background-repeat: no-repeat;
+	background-position: right 65% bottom 67%, 0px 0px;
 }
 
-.menu:open {
-	opacity: 1;
-	transform: scale(1);
-}
-@starting-style {
-	dialog:open {
-		opacity: 0;
-		transform: scale(0);
-	}
+.hero .container {
+	padding-top: calc(178 / 16 * 1rem);
+	padding-bottom: calc(84 / 16 * 1rem);
 }
 
-.menu::backdrop {
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: rgb(0 0 0 / 0%);
-	transition: display 0.7s allow-discrete, overlay 0.7s allow-discrete,
-		background-color 0.7s;
+.hero .subheading {
+	margin-bottom: calc(44 / 16 * 1rem);
 }
-.menu:open::backdrop {
-	background-color: rgb(0 0 0 / 75%);
+
+h1 {
+	margin-bottom: calc(16 / 16 * 1rem);
 }
-@starting-style {
-	.menu:open::backdrop {
-		background-color: rgb(0 0 0 / 0%);
-	}
-} */
+
+.btn-wrapper {
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+}
