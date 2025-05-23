@@ -3,14 +3,25 @@
 	--mobile: 375px;
 
 	/* Fonts */
-	--ff-main: 'Ubuntu', sans-serif;
-	--ff-alt: 'Overpass', sans-serif;
+	--ff-main: 'Overpass', sans-serif;
+	--ff-alt: 'Ubuntu', sans-serif;
+
+	--ff-heading: var(--ff-main);
+	--ff-body: var(--ff-main);
+	--ff-button: var(--ff-alt);
+	--ff-nav: var(--ff-alt);
 
 	--fs-base: calc(14 / 16 * 1rem);
 	--fs-h1: calc(24 / 16 * 1rem);
 	--fs-h2: calc(18 / 16 * 1rem);
 	--fs-h3: calc(18 / 16 * 1rem);
 	--fs-subheading: calc(14 / 16 * 1rem);
+
+	--fw-light: 300;
+	--fw-regular: 400;
+	--fw-medium: 500;
+	--fw-semi-bold: 600;
+	--fw-bold: 700;
 
 	/* Primary */
 	--clr-primary: hsl(356, 100%, 66%);
@@ -21,6 +32,7 @@
 	--clr-ntrl-dk: hsl(240, 10%, 16%);
 	--clr-ntrl-ltr: hsl(207, 13%, 34%);
 	--clr-ntrl-lt: hsl(0, 100%, 100%);
+	--clr-ntrl-lts: hsl(240, 7%, 94%);
 }
 
 @media (width > 375px) {

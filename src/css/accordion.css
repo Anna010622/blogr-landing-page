@@ -1,0 +1,47 @@
+.accordion h3 {
+	margin-bottom: calc(24 / 16 * 1rem);
+}
+
+.accordion button {
+	padding: 0;
+}
+.accordion .icon {
+	stroke: var(--clr-primary);
+}
+
+.accordion-trigger {
+	display: flex;
+	align-items: center;
+	gap: calc(8 / 16 * 1rem);
+	margin: 0 auto;
+}
+
+.accordion-trigger[aria-expanded='true'] {
+	color: var(--clr-ntrl-ltr);
+}
+
+.accordion-title {
+	font-weight: var(--fw-semi-bold);
+}
+.accordion-content {
+	margin-bottom: calc(24 / 16 * 1rem);
+	padding: calc(26 / 16 * 1rem);
+	background-color: var(--clr-ntrl-lts);
+	border-radius: calc(4 / 16 * 1rem);
+	color: var(--clr-ntrl-ltr);
+	font-weight: var(--fw-semi-bold);
+}
+
+.accordion li:not(:last-child) {
+	margin-bottom: calc(16 / 16 * 1rem);
+}
+
+.accordion a {
+	display: block;
+	text-decoration: none;
+
+	&:hover,
+	&:focus-visible {
+		color: var(--clr-ntrl-dk);
+	}
+}

@@ -1,7 +1,7 @@
 header {
 	position: absolute;
 	width: 100%;
-	padding: 48px 0;
+	padding: calc(48 / 16 * 1rem) 0;
 	color: var(--clr-ntrl-lt);
 }
 
@@ -13,13 +13,24 @@ header .container {
 
 .menu {
 	position: absolute;
-	top: 84px;
-	width: 100%;
-	border-radius: 4px;
+	top: calc(84 / 16 * 1rem);
+	right: 0;
+	width: min(100%, calc(324 / 16 * 1rem));
+	padding: calc(32 / 16 * 1rem) calc(24 / 16 * 1rem);
+	border-radius: calc(4 / 16 * 1rem);
+	color: var(--clr-ntrl-dk);
 	background-color: var(--clr-ntrl-lt);
+	box-shadow: 0 21px 38px 0 rgba(75, 88, 98, 0.47);
+	-webkit-box-shadow: 0 21px 38px 0 rgba(75, 88, 98, 0.47);
+	-moz-box-shadow: 0 21px 38px 0 rgba(75, 88, 98, 0.47);
+}
+.menu hr {
+	border: 1px solid var(--clr-ntrl-lts);
+	margin-bottom: calc(32 / 16 * 1rem);
 }
 
-.open-menu {
-	border: 0;
-	background-color: transparent;
+.menu .login {
+	display: block;
+	margin: 0 auto calc(24 / 16 * 1rem);
+	font-weight: var(--fw-semi-bold);
 }

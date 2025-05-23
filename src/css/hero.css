@@ -5,7 +5,7 @@
 		linear-gradient(to bottom right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
 	background-position: center;
 	background-repeat: no-repeat;
-	background-position: right 65% bottom 67%, 0px 0px;
+	background-position: right 65% bottom 67%, 0 0;
 }
 
 .hero .container {
@@ -23,6 +23,6 @@ h1 {
 
 .btn-wrapper {
 	display: flex;
-	gap: 10px;
+	gap: calc(10 / 16 * 1rem);
 	justify-content: center;
 }

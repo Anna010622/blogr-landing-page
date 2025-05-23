@@ -11,8 +11,9 @@ html {
 body {
 	min-height: 100vh;
 
-	font-family: var(--ff-main);
+	font-family: var(--ff-body);
 	font-size: var(--fs-base);
+	font-weight: var(--fw-light);
 	line-height: 1.5;
 	color: var(--clr-ntrl-dk);
 	text-align: center;
@@ -28,6 +29,8 @@ h5,
 h6 {
 	margin-top: 0;
 	text-wrap: balance;
+	font-family: var(--ff-heading);
+	font-weight: var(--fw-semi-bold);
 }
 
 h1 {
@@ -62,6 +65,19 @@ a {
 	color: inherit;
 }
 
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+button {
+	border: none;
+	color: inherit;
+	background-color: transparent;
+	line-height: inherit;
+	cursor: pointer;
+}
+
 .container {
 	--padding: 1rem;
 
@@ -71,6 +87,7 @@ a {
 
 .subheading {
 	font-size: var(--fs-subheading);
+	font-family: var(--ff-heading);
 }
 
 .icon {
@@ -80,12 +97,21 @@ a {
 
 .button {
 	display: inline-block;
-	cursor: pointer;
-	padding: 10px 14px;
-	border-radius: 24px;
-	min-width: 122px;
-	font-weight: 600;
+	padding: calc(10 / 16 * 1rem) calc(14 / 16 * 1rem);
+	border-radius: calc(24 / 16 * 1rem);
+	min-width: calc(122 / 16 * 1rem);
+	font-family: var(--ff-button);
+	font-weight: var(--fw-bold);
 	text-decoration: none;
+}
+
+.button-gradient {
+	background: linear-gradient(
+		to right,
+		hsl(13, 100%, 72%),
+		hsl(353, 100%, 62%)
+	);
+	color: var(--clr-ntrl-lt);
 }
 
 .button-fill {
