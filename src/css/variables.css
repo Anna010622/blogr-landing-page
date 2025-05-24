@@ -35,7 +35,7 @@
 	--clr-ntrl-lts: hsl(240, 7%, 94%);
 }
 
-@media (width > 375px) {
+@media (width > 768px) {
 	:root {
 		--fs-h1: calc(46 / 16 * 1rem);
 		--fs-h2: calc(28 / 16 * 1rem);

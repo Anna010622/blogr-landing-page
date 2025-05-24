@@ -9,9 +9,115 @@ header .container {
 	position: relative;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 }
 
-.menu {
+.main-nav {
+	display: none;
+	margin-left: calc(54 / 16 * 1rem);
+
+	font-family: var(--ff-nav);
+
+	@media (width > 768px) {
+		display: block;
+	}
+}
+
+.main-nav .list {
+	display: flex;
+	gap: calc(22 / 16 * 1rem);
+	margin: 0;
+}
+
+.main-nav .list-item {
+	padding-inline: calc(4 / 16 * 1rem);
+}
+
+.sub-menu-trigger {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	opacity: 0.75;
+
+	&:hover,
+	&:focus-visible {
+		opacity: 1;
+	}
+}
+
+.sub-menu-title {
+	font-weight: var(--fw-bold);
+
+	.sub-menu-trigger:hover &,
+	.sub-menu-trigger:focus-visible & {
+		text-decoration: underline;
+		text-decoration-thickness: 2px;
+	}
+}
+
+.sub-menu-trigger:hover .icon {
+	transform: rotate(180deg);
+}
+
+.sub-menu-content {
+	position: absolute;
+	margin-top: calc(24 / 16 * 1rem);
+	padding: calc(26 / 16 * 1rem);
+	border-radius: calc(4 / 16 * 1rem);
+	transform: translateX(calc(-24 / 16 * 1rem));
+	min-width: calc(168 / 16 * 1rem);
+
+	color: var(--clr-ntrl-dk);
+	background-color: var(--clr-ntrl-lt);
+	font-weight: var(--fw-regular);
+	text-align: left;
+
+	box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+
+	.sub-menu-trigger:hover + & {
+		display: block;
+	}
+}
+
+.sub-menu-content li:hover,
+.sub-menu-content li:focus-visible {
+	font-weight: var(--fw-medium);
+}
+.sub-menu-content a {
+	display: block;
+	text-decoration: none;
+}
+
+.user-buttons {
+	display: none;
+	margin-left: auto;
+
+	@media (width > 768px) {
+		display: block;
+	}
+}
+
+.user-buttons .login {
+	padding: calc(4 / 16 * 1rem);
+	opacity: 0.75;
+	margin-right: calc(20 / 16 * 1rem);
+	font-weight: var(--fw-bold);
+
+	&:hover,
+	&:focus-visible {
+		opacity: 1;
+		text-decoration: underline;
+		text-decoration-thickness: 2px;
+	}
+}
+
+.mob-menu-toggle {
+	@media (width > 768px) {
+		display: none;
+	}
+}
+
+.mob-menu {
 	position: absolute;
 	top: calc(84 / 16 * 1rem);
 	right: 0;
@@ -24,12 +130,12 @@ header .container {
 	-webkit-box-shadow: 0 21px 38px 0 rgba(75, 88, 98, 0.47);
 	-moz-box-shadow: 0 21px 38px 0 rgba(75, 88, 98, 0.47);
 }
-.menu hr {
+.mob-menu hr {
 	border: 1px solid var(--clr-ntrl-lts);
 	margin-bottom: calc(32 / 16 * 1rem);
 }
 
-.menu .login {
+.mob-menu .login {
 	display: block;
 	margin: 0 auto calc(24 / 16 * 1rem);
 	font-weight: var(--fw-semi-bold);

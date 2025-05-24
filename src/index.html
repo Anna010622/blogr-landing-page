@@ -27,8 +27,74 @@
 						<use href="./images/sprite.svg#logo"></use>
 					</svg>
 				</a>
+				<nav class="main-nav">
+					<ul class="list">
+						<li class="list-item">
+							<button
+								class="sub-menu-trigger"
+								type="button"
+								aria-expanded="false"
+								aria-controls="product"
+							>
+								<span class="sub-menu-title">Product</span
+								><svg class="icon" width="10" height="10">
+									<use href="./images/sprite.svg#icon-arrow"></use>
+								</svg>
+							</button>
+							<ul class="sub-menu-content" id="product" role="region" hidden>
+								<li><a href="#">Overview</a></li>
+								<li><a href="#">Pricing</a></li>
+								<li><a href="#">Marketplace</a></li>
+								<li><a href="#">Features</a></li>
+								<li><a href="#">Integrations</a></li>
+							</ul>
+						</li>
+						<li class="list-item">
+							<button
+								class="sub-menu-trigger"
+								type="button"
+								aria-expanded="false"
+								aria-controls="company"
+							>
+								<span class="sub-menu-title">Company</span
+								><svg class="icon" width="10" height="10">
+									<use href="./images/sprite.svg#icon-arrow"></use>
+								</svg>
+							</button>
+							<ul class="sub-menu-content" id="company" role="region" hidden>
+								<li><a href="#">About</a></li>
+								<li><a href="#">Team</a></li>
+								<li><a href="#">Blog</a></li>
+								<li><a href="#">Careers</a></li>
+							</ul>
+						</li>
+						<li class="list-item">
+							<button
+								class="sub-menu-trigger"
+								type="button"
+								aria-expanded="false"
+								aria-controls="connect"
+							>
+								<span class="sub-menu-title">Connect</span
+								><svg class="icon" width="10" height="10">
+									<use href="./images/sprite.svg#icon-arrow"></use>
+								</svg>
+							</button>
+							<ul class="sub-menu-content" id="connect" role="region" hidden>
+								<li><a href="#">Contact</a></li>
+								<li><a href="#">Newsletter</a></li>
+								<li><a href="#">LinkedIn</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
 
-				<div class="menu" id="mobile-menu" hidden>
+				<div class="user-buttons">
+					<button class="login" type="button">Login</button>
+					<button class="button button-fill" type="button">Sign Up</button>
+				</div>
+
+				<div class="mob-menu" id="mobile-menu" hidden>
 					<nav>
 						<ul class="accordion">
 							<li class="accordion-item">
@@ -132,7 +198,7 @@
 					</div>
 				</div>
 
-				<button class="open-menu" aria-label="Open menu" type="button">
+				<button class="mob-menu-toggle" aria-label="Open menu" type="button">
 					<svg class="icon" width="30" height="30">
 						<use href="./images/sprite.svg#icon-hamburger"></use>
 					</svg>

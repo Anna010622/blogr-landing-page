@@ -1,6 +1,6 @@
 <svg width="0" height="0" class="hidden">
   <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 7" id="icon-arrow">
-    <path fill="none"  stroke-width="2" opacity=".75" d="M1 1l4 4 4-4"></path>
+    <path fill="none"  stroke-width="2" opacity="1" d="M1 1l4 4 4-4"></path>
   </symbol>
   <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" id="icon-close">
     <path d="M23.607.98l1.414 1.413L14.414 13l10.607 10.607-1.414 1.414L13 14.414 2.393 25.021.98 23.607 11.586 13 .98 2.393 2.393.98 13 11.586 23.607.98z"  fill-rule="evenodd"></path>
