@@ -37,26 +37,25 @@ header .container {
 	display: flex;
 	align-items: center;
 	gap: 12px;
-	opacity: 0.75;
-
-	&:hover,
-	&:focus-visible {
-		opacity: 1;
-	}
 }
 
 .sub-menu-title {
 	font-weight: var(--fw-bold);
+	opacity: 0.75;
 
 	.sub-menu-trigger:hover &,
-	.sub-menu-trigger:focus-visible & {
+	.sub-menu-trigger:focus-visible &,
+	.list-item:has(.sub-menu-content.open) & {
 		text-decoration: underline;
 		text-decoration-thickness: 2px;
+		opacity: 1;
 	}
 }
 
-.sub-menu-trigger:hover .icon {
-	transform: rotate(180deg);
+.sub-menu-trigger .icon {
+	.list-item:has(.sub-menu-content.open) & {
+		transform: rotate(180deg);
+	}
 }
 
 .sub-menu-content {
@@ -74,7 +73,7 @@ header .container {
 
 	box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 
-	.sub-menu-trigger:hover + & {
+	&.open {
 		display: block;
 	}
 }
