@@ -27,7 +27,7 @@
 						<use href="./images/sprite.svg#logo"></use>
 					</svg>
 				</a>
-				<nav class="main-nav" aria-label="Main">
+				<nav class="main-nav">
 					<ul class="list">
 						<li class="list-item">
 							<button
@@ -102,17 +102,27 @@
 					<button class="button button-fill" type="button">Sign Up</button>
 				</div>
 
+				<button
+					class="mob-menu-toggle"
+					aria-label="Open menu"
+					aria-expanded="false"
+					aria-controls="mobile-menu"
+					data-toggle-mob-menu
+					type="button"
+				>
+					<span></span>
+				</button>
 				<div class="mob-menu" id="mobile-menu" hidden>
 					<nav>
 						<ul class="accordion">
 							<li class="accordion-item">
 								<h3>
 									<button
-										type="button"
-										aria-expanded="false"
-										class="accordion-trigger"
-										aria-controls="sect1"
 										id="product"
+										class="accordion-trigger"
+										aria-expanded="false"
+										aria-controls="sect1"
+										type="button"
 									>
 										<span class="accordion-title">Product</span>
 										<svg class="icon" width="10" height="10">
@@ -120,30 +130,24 @@
 										</svg>
 									</button>
 								</h3>
-								<div
-									id="sect1"
-									role="region"
-									aria-labelledby="product"
-									class="accordion-content"
-									hidden
-								>
+								<div id="sect1" class="accordion-content" hidden>
 									<ul>
-										<li><a href="#">Overview</a></li>
-										<li><a href="#">Pricing</a></li>
-										<li><a href="#">Marketplace</a></li>
-										<li><a href="#">Features</a></li>
-										<li><a href="#">Integrations</a></li>
+										<li><a href="#" data-active-el>Overview</a></li>
+										<li><a href="#" data-active-el>Pricing</a></li>
+										<li><a href="#" data-active-el>Marketplace</a></li>
+										<li><a href="#" data-active-el>Features</a></li>
+										<li><a href="#" data-active-el>Integrations</a></li>
 									</ul>
 								</div>
 							</li>
 							<li class="accordion-item">
 								<h3>
 									<button
-										type="button"
+										id="company"
 										aria-expanded="false"
 										class="accordion-trigger"
 										aria-controls="sect2"
-										id="company"
+										type="button"
 									>
 										<span class="accordion-title">Company</span>
 										<svg class="icon" width="10" height="10">
@@ -151,29 +155,23 @@
 										</svg>
 									</button>
 								</h3>
-								<div
-									id="sect2"
-									role="region"
-									aria-labelledby="company"
-									class="accordion-content"
-									hidden
-								>
+								<div id="sect2" class="accordion-content" hidden>
 									<ul>
-										<li><a href="#">About</a></li>
-										<li><a href="#">Team</a></li>
-										<li><a href="#">Blog</a></li>
-										<li><a href="#">Careers</a></li>
+										<li><a href="#" data-active-el>About</a></li>
+										<li><a href="#" data-active-el>Team</a></li>
+										<li><a href="#" data-active-el>Blog</a></li>
+										<li><a href="#" data-active-el>Careers</a></li>
 									</ul>
 								</div>
 							</li>
 							<li class="accordion-item">
 								<h3>
 									<button
-										type="button"
-										aria-expanded="false"
-										class="accordion-trigger"
-										aria-controls="sect3"
 										id="connect"
+										class="accordion-trigger"
+										aria-expanded="false"
+										aria-controls="sect3"
+										type="button"
 									>
 										<span class="accordion-title">Connect</span>
 										<svg class="icon" width="10" height="10">
@@ -181,17 +179,11 @@
 										</svg>
 									</button>
 								</h3>
-								<div
-									id="sect3"
-									role="region"
-									aria-labelledby="connect"
-									class="accordion-content"
-									hidden
-								>
+								<div id="sect3" class="accordion-content" hidden>
 									<ul>
-										<li><a href="#">Contact</a></li>
-										<li><a href="#">Newsletter</a></li>
-										<li><a href="#">LinkedIn</a></li>
+										<li><a href="#" data-active-el>Contact</a></li>
+										<li><a href="#" data-active-el>Newsletter</a></li>
+										<li><a href="#" data-active-el>LinkedIn</a></li>
 									</ul>
 								</div>
 							</li>
@@ -199,18 +191,12 @@
 					</nav>
 					<hr />
 					<div>
-						<button class="login" type="button">Login</button>
-						<button class="button button-gradient" type="button">
+						<button class="login" type="button" data-active-el>Login</button>
+						<button class="button button-gradient" type="button" data-active-el>
 							Sign Up
 						</button>
 					</div>
 				</div>
-
-				<button class="mob-menu-toggle" aria-label="Open menu" type="button">
-					<svg class="icon" width="30" height="30">
-						<use href="./images/sprite.svg#icon-hamburger"></use>
-					</svg>
-				</button>
 			</div>
 		</header>
 		<main>
@@ -271,7 +257,7 @@
 				<div class="conatainer">
 					<img src="./images/illustration-laptop-mb.svg" alt="" />
 					<div>
-						<h2 class="visual-hidden">Advantages</h2>
+						<h2 class="visually-hidden">Advantages</h2>
 						<h3>Free, open, simple</h3>
 						<p>
 							Blogr is a free and open source application backed by a large

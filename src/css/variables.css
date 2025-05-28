@@ -33,6 +33,13 @@
 	--clr-ntrl-ltr: hsl(207, 13%, 34%);
 	--clr-ntrl-lt: hsl(0, 100%, 100%);
 	--clr-ntrl-lts: hsl(240, 7%, 94%);
+
+	/* Transition */
+	--tr-duration-short: 0.1s;
+	--tr-duration-medium: 0.25s;
+	--tr-duration-long: 0.3s;
+
+	--tr-timing-fun: ease-in-out;
 }
 
 @media (width > 768px) {
