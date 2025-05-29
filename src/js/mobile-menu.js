@@ -1,12 +1,19 @@
 const modal = document.querySelector('#mobile-menu');
 const toggleModalBtn = document.querySelector('[data-toggle-mob-menu');
 const body = document.querySelector('body');
+const media = window.matchMedia('(width > 768px)');
 
 toggleModalBtn.addEventListener('click', e => {
 	e.stopPropagation();
 	if (toggleModalBtn.getAttribute('aria-expanded') === 'false') {
 		openMenu();
 	} else {
+		closeMenu();
+	}
+});
+
+media.addEventListener('change', e => {
+	if (e.matches) {
 		closeMenu();
 	}
 });
