@@ -27,7 +27,7 @@
 						<use href="./images/sprite.svg#logo"></use>
 					</svg>
 				</a>
-				<nav class="main-nav">
+				<nav class="main-nav" id="header-nav">
 					<ul class="list">
 						<li class="list-item">
 							<button
@@ -36,8 +36,8 @@
 								aria-controls="product"
 								type="button"
 							>
-								<span class="sub-menu-title">Product</span
-								><svg class="icon" width="10" height="10">
+								<span class="sub-menu-title">Product</span>
+								<svg class="icon" width="10" height="10">
 									<use href="./images/sprite.svg#icon-arrow"></use>
 								</svg>
 							</button>
@@ -98,19 +98,21 @@
 				</nav>
 
 				<div class="user-buttons">
-					<button class="login" type="button">Login</button>
+					<button class="login" type="button"><span>Login</span></button>
 					<button class="button button-fill" type="button">Sign Up</button>
 				</div>
 
 				<button
 					class="mob-menu-toggle"
-					aria-label="Open menu"
+					aria-label="Open the menu"
 					aria-expanded="false"
 					aria-controls="mobile-menu"
 					data-toggle-mob-menu
 					type="button"
 				>
-					<span></span>
+					<div class="hamburger-icon">
+						<span></span>
+					</div>
 				</button>
 
 				<div class="mob-menu" id="mobile-menu" hidden>
@@ -191,7 +193,7 @@
 						</ul>
 					</nav>
 					<hr />
-					<div>
+					<div class="btn-wrapper">
 						<button class="login" type="button" data-active-el>Login</button>
 						<button class="button button-gradient" type="button" data-active-el>
 							Sign Up

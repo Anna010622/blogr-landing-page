@@ -99,13 +99,19 @@ button {
 }
 
 .button {
-	display: inline-block;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	padding: calc(10 / 16 * 1rem) calc(14 / 16 * 1rem);
 	border-radius: calc(24 / 16 * 1rem);
 	min-width: calc(122 / 16 * 1rem);
 	font-family: var(--ff-button);
 	font-weight: var(--fw-bold);
 	text-decoration: none;
+
+	transition-property: background-color, color;
+	transition-duration: var(--tr-duration-medium);
+	transition-timing-function: var(--tr-timing-fun);
 }
 
 .button-gradient {

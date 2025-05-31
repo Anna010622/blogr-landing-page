@@ -23,8 +23,18 @@
 .accordion-title {
 	font-weight: var(--fw-semi-bold);
 }
+
+.accordion-trigger .icon {
+	transition-property: transform;
+	transition-duration: var(--tr-duration-medium);
+	transition-timing-function: var(--tr-timing-fun);
+}
+.accordion-trigger[aria-expanded='true'] .icon {
+	transform: rotateX(180deg);
+}
+
 .accordion-content {
-	margin-bottom: calc(24 / 16 * 1rem);
+	margin: calc(24 / 16 * 1rem) 0 calc(24 / 16 * 1rem);
 	padding: calc(26 / 16 * 1rem);
 	background-color: var(--clr-ntrl-lts);
 	border-radius: calc(4 / 16 * 1rem);
@@ -39,6 +49,7 @@
 .accordion a {
 	display: block;
 	text-decoration: none;
+	transition: color var(--tr-duration-medium) var(--tr-timing-fun);
 
 	&:hover,
 	&:focus-visible {

@@ -1,4 +1,5 @@
 const navItems = [...document.querySelectorAll('.main-nav .list-item')];
+const nav = document.querySelector('#header-nav');
 
 let timer;
 
@@ -21,14 +22,18 @@ for (let navItem of navItems) {
 	});
 }
 
-document.addEventListener('click', () => {
-	navItems.forEach(navItem => hideSubMenuContent(navItem));
-});
-
 document.addEventListener('keydown', event => {
 	if (event.key === 'Escape') {
 		navItems.forEach(navItem => hideSubMenuContent(navItem));
 	}
+});
+
+nav.addEventListener('focusout', () => {
+	setTimeout(() => {
+		if (!nav.contains(document.activeElement)) {
+			navItems.forEach(navItem => hideSubMenuContent(navItem));
+		}
+	}, 0);
 });
 
 function showSubMenuContent(navItem) {

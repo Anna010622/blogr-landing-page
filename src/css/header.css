@@ -40,21 +40,54 @@ header .container {
 }
 
 .sub-menu-title {
+	position: relative;
 	font-weight: var(--fw-bold);
 	opacity: 0.8;
+	transition: opacity var(--tr-duration-medium) var(--tr-timing-fun);
 
 	.sub-menu-trigger:hover &,
 	.sub-menu-trigger:focus-visible &,
 	.list-item:has(.sub-menu-content.open) & {
-		text-decoration: underline;
-		text-decoration-thickness: 2px;
 		opacity: 1;
 	}
 }
 
+.sub-menu-title::after,
+.user-buttons .login span::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 1px;
+	height: 2px;
+	width: 0;
+	background-color: var(--clr-ntrl-lt);
+	border-radius: 4px;
+	transition-property: width;
+	transition-duration: var(--tr-duration-medium);
+	transition-timing-function: var(--tr-timing-fun);
+}
+.sub-menu-trigger:hover .sub-menu-title::after,
+.sub-menu-trigger:focus-visible .sub-menu-title::after,
+.list-item:has(.sub-menu-content.open) .sub-menu-title::after,
+.user-buttons .login:hover span::after,
+.user-buttons .login:focus-visible span::after {
+	width: 100%;
+}
+
 .sub-menu-trigger .icon {
+	opacity: 0.5;
+	transition-property: transform, opacity;
+	transition-duration: var(--tr-duration-medium);
+	transition-timing-function: var(--tr-timing-fun);
+
 	.list-item:has(.sub-menu-content.open) & {
-		transform: rotate(180deg);
+		transform: rotateX(180deg);
+		opacity: 1;
+	}
+
+	.list-item:has(.sub-menu-trigger:hover) &,
+	.list-item:has(.sub-menu-trigger:focus) & {
+		opacity: 1;
 	}
 }
 
@@ -71,10 +104,22 @@ header .container {
 	font-weight: var(--fw-regular);
 	text-align: left;
 
+	opacity: 0;
 	box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+
+	transition-property: display, transform, opacity;
+	transition-behavior: allow-discrete;
+	transition-duration: var(--tr-duration-medium);
+	transition-timing-function: var(--tr-timing-fun);
 
 	&.open {
 		display: block;
+		opacity: 1;
+
+		@starting-style {
+			opacity: 0;
+			transform: translateY(-15%) translateX(calc(-24 / 16 * 1rem));
+		}
 	}
 }
 
@@ -89,28 +134,40 @@ header .container {
 
 .user-buttons {
 	display: none;
+	align-items: center;
 	margin-left: auto;
+	gap: calc(20 / 16 * 1rem);
 
 	@media (width > 768px) {
-		display: block;
+		display: flex;
 	}
 }
 
 .user-buttons .login {
-	padding: calc(4 / 16 * 1rem);
+	display: flex;
 	opacity: 0.75;
-	margin-right: calc(20 / 16 * 1rem);
 	font-weight: var(--fw-bold);
+	font-family: var(--ff-nav);
+	transition: opacity var(--tr-duration-medium) var(--tr-timing-fun);
 
 	&:hover,
 	&:focus-visible {
 		opacity: 1;
-		text-decoration: underline;
-		text-decoration-thickness: 2px;
 	}
+}
+.user-buttons .login span {
+	position: relative;
 }
 
 .mob-menu-toggle {
+	padding: calc(4 / 16 * 1rem);
+
+	@media (width > 768px) {
+		display: none;
+	}
+}
+
+.hamburger-icon {
 	--bar-height: calc(4 / 16);
 	--icon-size: calc(30 / 16);
 
@@ -121,23 +178,17 @@ header .container {
 			1rem
 	);
 
-	box-sizing: content-box;
 	display: flex;
 	flex-direction: column;
-	padding: calc(2 / 16 * 1rem);
-	height: calc(var(--icon-size) * 1rem);
 	width: calc(var(--icon-size) * 1rem);
+	aspect-ratio: 1/1;
 	justify-content: space-evenly;
 	opacity: 0.8;
 	transition: opacity var(--tr-duration-medium) var(--tr-timing-fun);
 
-	&:hover,
-	&:focus-visible {
+	.mob-menu-toggle:hover &,
+	.mob-menu-toggle:focus-visible & {
 		opacity: 1;
-	}
-
-	@media (width > 768px) {
-		display: none;
 	}
 
 	& span,
@@ -154,15 +205,15 @@ header .container {
 		transform-origin: right center;
 	}
 
-	&[aria-expanded='true'] span {
+	.mob-menu-toggle[aria-expanded='true'] & span {
 		opacity: 0;
 	}
 
-	&[aria-expanded='true']::before {
+	.mob-menu-toggle[aria-expanded='true'] &::before {
 		transform: translateY(calc(var(--translateY) * -1)) rotate(-45deg)
 			scaleX(var(--scaleX));
 	}
-	&[aria-expanded='true']::after {
+	.mob-menu-toggle[aria-expanded='true'] &::after {
 		transform: translateY(var(--translateY)) rotate(45deg) scaleX(var(--scaleX));
 	}
 }
@@ -206,8 +257,12 @@ header .container {
 	margin-bottom: calc(32 / 16 * 1rem);
 }
 
+.mob-menu .btn-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: calc(24 / 16 * 1rem);
+	align-items: center;
+}
 .mob-menu .login {
-	display: block;
-	margin: 0 auto calc(24 / 16 * 1rem);
 	font-weight: var(--fw-semi-bold);
 }
