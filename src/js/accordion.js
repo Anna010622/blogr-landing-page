@@ -21,12 +21,12 @@ function toggleAccordion(itemToActivate) {
 	});
 
 	contents.forEach(content => {
-		content.setAttribute('hidden', true);
+		content.setAttribute('inert', true);
 	});
 
 	itemToActivate.querySelector('button').setAttribute('aria-expanded', true);
 
-	itemToActivate.querySelector('.accordion-content').toggleAttribute('hidden');
+	itemToActivate.querySelector('.accordion-content').toggleAttribute('inert');
 }
 
 function checkIfOpen(activeItem) {
@@ -35,7 +35,7 @@ function checkIfOpen(activeItem) {
 
 	if (open) {
 		activeButton.setAttribute('aria-expanded', !open);
-		activeItem.querySelector('.accordion-content').toggleAttribute('hidden');
+		activeItem.querySelector('.accordion-content').toggleAttribute('inert');
 		return true;
 	}
 	return false;

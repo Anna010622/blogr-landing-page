@@ -1,5 +1,5 @@
 .accordion h3 {
-	margin-bottom: calc(24 / 16 * 1rem);
+	margin-bottom: 0;
 }
 
 .accordion button {
@@ -34,7 +34,24 @@
 }
 
 .accordion-content {
-	margin: calc(24 / 16 * 1rem) 0 calc(24 / 16 * 1rem);
+	display: grid;
+	grid-template-rows: 0fr;
+	margin-bottom: calc(34 / 16 * 1rem);
+	transition-property: grid-template-rows;
+	transition-duration: var(--tr-duration-long);
+	transition-timing-function: var(--tr-timing-fun);
+
+	.accordion-item:has(.accordion-trigger[aria-expanded='true']) & {
+		grid-template-rows: 1fr;
+	}
+}
+
+.accordion-content div {
+	overflow: hidden;
+}
+
+.accordion-content ul {
+	margin-top: calc(18 / 16 * 1rem);
 	padding: calc(26 / 16 * 1rem);
 	background-color: var(--clr-ntrl-lts);
 	border-radius: calc(4 / 16 * 1rem);
@@ -42,7 +59,7 @@
 	font-weight: var(--fw-semi-bold);
 }
 
-.accordion li:not(:last-child) {
+.accordion-content li:not(:last-child) {
 	margin-bottom: calc(16 / 16 * 1rem);
 }
 

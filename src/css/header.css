@@ -223,7 +223,7 @@ header .container {
 	top: calc(84 / 16 * 1rem);
 	right: 0;
 	width: min(100%, calc(324 / 16 * 1rem));
-	padding: calc(32 / 16 * 1rem) calc(24 / 16 * 1rem);
+	padding: calc(24 / 16 * 1rem);
 	border-radius: calc(4 / 16 * 1rem);
 	color: var(--clr-ntrl-dk);
 	background-color: var(--clr-ntrl-lt);
