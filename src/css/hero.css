@@ -1,11 +1,16 @@
 .hero {
 	color: var(--clr-ntrl-lt);
-	border-bottom-left-radius: 25%;
+	border-bottom-left-radius: 100px;
 	background-image: url('../images/bg-pattern-intro-mobile.svg'),
 		linear-gradient(to bottom right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
-	background-position: center;
 	background-repeat: no-repeat;
 	background-position: right 65% bottom 67%, 0 0;
+
+	@media (width > 768px) {
+		background-image: url('../images/bg-pattern-intro-desktop.svg'),
+			linear-gradient(to bottom right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+		background-position: left 40% bottom 50%, 0 0;
+	}
 }
 
 .hero .container {
@@ -13,12 +18,13 @@
 	padding-bottom: calc(84 / 16 * 1rem);
 }
 
-.hero .subheading {
-	margin-bottom: calc(44 / 16 * 1rem);
+h1 {
+	margin-bottom: calc(4 / 16 * 1rem);
 }
 
-h1 {
-	margin-bottom: calc(16 / 16 * 1rem);
+.hero .subheading {
+	margin-bottom: calc(42 / 16 * 1rem);
+	opacity: 0.8;
 }
 
 .hero .btn-wrapper {

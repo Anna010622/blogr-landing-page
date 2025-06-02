@@ -1,7 +1,4 @@
 :root {
-	--desktop: 1440px;
-	--mobile: 375px;
-
 	/* Fonts */
 	--ff-main: 'Overpass', sans-serif;
 	--ff-alt: 'Ubuntu', sans-serif;
@@ -11,11 +8,11 @@
 	--ff-button: var(--ff-alt);
 	--ff-nav: var(--ff-alt);
 
-	--fs-base: calc(14 / 16 * 1rem);
-	--fs-h1: calc(24 / 16 * 1rem);
-	--fs-h2: calc(18 / 16 * 1rem);
-	--fs-h3: calc(18 / 16 * 1rem);
-	--fs-subheading: calc(14 / 16 * 1rem);
+	--fs-base: calc(16 / 16 * 1rem);
+	--fs-h1: calc(34 / 16 * 1rem);
+	--fs-h2: calc(26 / 16 * 1rem);
+	--fs-h3: calc(22 / 16 * 1rem);
+	--fs-subheading: calc(18 / 16 * 1rem);
 
 	--fw-light: 300;
 	--fw-regular: 400;
@@ -39,14 +36,14 @@
 	--tr-duration-medium: 0.25s;
 	--tr-duration-long: 0.3s;
 
-	--tr-timing-fun: ease-in-out;
+	--tr-timing-fun: cubic-bezier(0.44, 0, 0.56, 1);
 }
 
 @media (width > 768px) {
 	:root {
-		--fs-h1: calc(46 / 16 * 1rem);
-		--fs-h2: calc(28 / 16 * 1rem);
-		--fs-h3: calc(20 / 16 * 1rem);
-		--fs-subheading: calc(16 / 16 * 1rem);
+		--fs-h1: calc(62 / 16 * 1rem);
+		--fs-h2: calc(38 / 16 * 1rem);
+		--fs-h3: calc(26 / 16 * 1rem);
+		--fs-subheading: calc(24 / 16 * 1rem);
 	}
 }
