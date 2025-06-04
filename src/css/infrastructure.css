@@ -1,0 +1,74 @@
+.infrastructure {
+	position: relative;
+	padding-top: calc(152 / 16 * 1rem);
+
+	@media (width > 768px) {
+		padding-block: calc(48 / 16 * 1rem);
+	}
+
+	& > div {
+		background: url('../images/bg-pattern-circles.svg') var(--clr-primary-dk)
+			left 50% top -13.375rem / 32.5rem no-repeat;
+		padding-block: calc(190 / 16 * 1rem) calc(98 / 16 * 1rem);
+		border-top-right-radius: 100px;
+		border-bottom-left-radius: 100px;
+
+		@media (width > 768px) {
+			padding-block: calc(104 / 16 * 1rem);
+			background-position: left calc(50% - 25rem) top calc(50% - 12.5rem);
+			background-size: min(70%, calc(990 / 16 * 1rem));
+		}
+	}
+
+	& .container {
+		@media (width > 768px) {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: calc(34 / 16 * 1rem);
+		}
+	}
+	.content {
+		color: var(--clr-ntrl-lt);
+
+		@media (width > 768px) {
+			text-align: left;
+		}
+	}
+	.title {
+		margin-bottom: calc(10 / 16 * 1rem);
+
+		@media (max-width: 768px) {
+			margin-bottom: calc(14 / 16 * 1rem);
+		}
+	}
+
+	.image-container {
+		@media (max-width: 768px) {
+			position: absolute;
+			top: calc(-19 / 16 * 1rem);
+			left: 50%;
+			transform: translateX(-50%);
+			width: 100%;
+		}
+
+		@media (width > 768px) {
+			position: relative;
+		}
+	}
+
+	.image {
+		@media (max-width: 768px) {
+			height: calc(380 / 16 * 1rem);
+			margin-inline: auto;
+			object-fit: contain;
+		}
+
+		@media (width > 768px) {
+			position: absolute;
+			top: 58%;
+			transform: translateY(-50%);
+			left: calc(-40 / 16 * 1rem);
+			max-height: calc(480 / 16 * 1rem);
+		}
+	}
+}

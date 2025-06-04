@@ -19,25 +19,27 @@
 		@media (width > 768px) {
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
-			gap: calc(40 / 16 * 1rem);
+			gap: calc(34 / 16 * 1rem);
 		}
 	}
 
 	.image-container {
 		display: block;
 		margin: 0 auto calc(36 / 16 * 1rem);
-		width: max-content;
+		max-width: max-content;
 
 		@media (width > 768px) {
 			margin: 0;
 			order: 2;
 			position: absolute;
-			height: calc(886 / 16 * 1rem);
+			height: min(100%, 840px);
 			left: 53%;
 			top: 0;
 		}
 	}
 	.image {
+		object-position: center;
+
 		@media (width > 768px) {
 			height: 100%;
 			object-fit: cover;

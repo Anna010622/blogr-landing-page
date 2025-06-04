@@ -220,6 +220,7 @@ header .container {
 
 .mob-menu {
 	position: absolute;
+	z-index: var(--z-i-mob-menu);
 	top: calc(84 / 16 * 1rem);
 	right: 0;
 	width: min(100%, calc(324 / 16 * 1rem));

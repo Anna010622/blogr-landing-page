@@ -37,6 +37,9 @@
 	--tr-duration-long: 0.3s;
 
 	--tr-timing-fun: cubic-bezier(0.44, 0, 0.56, 1);
+
+	/* Z-index */
+	--z-i-mob-menu: 100;
 }
 
 @media (width > 768px) {
