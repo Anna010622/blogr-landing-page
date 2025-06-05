@@ -1,0 +1,70 @@
+.advantages {
+	position: relative;
+	padding-block: calc(80 / 16 * 1rem);
+
+	@media (width > 768px) {
+		padding-block: calc(116 / 16 * 1rem);
+	}
+
+	@media (width > 1054px) {
+		margin-block: calc(116 / 16 * 1rem);
+	}
+
+	h2 {
+		margin-bottom: calc(36 / 16 * 1rem);
+
+		@media (width > 768px) {
+			margin-bottom: calc(100 / 16 * 1rem);
+		}
+	}
+
+	.inner {
+		@media (width > 768px) {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: calc(34 / 16 * 1rem);
+			align-items: center;
+		}
+	}
+
+	.image-container {
+		display: block;
+		margin: 0 auto calc(36 / 16 * 1rem);
+		max-width: max-content;
+
+		@media (width > 768px) {
+			margin: 0;
+		}
+	}
+
+	.image {
+		object-position: center;
+
+		@media (width > 768px) {
+			object-fit: contain;
+			transform: translateX(-35%) scale(1.815);
+		}
+	}
+
+	.content {
+		@media (width > 768px) {
+			text-align: left;
+		}
+	}
+
+	.content div:not(:last-child) {
+		margin-bottom: calc(34 / 16 * 1rem);
+
+		@media (width > 768px) {
+			margin-bottom: calc(72 / 16 * 1rem);
+		}
+	}
+
+	h3 {
+		margin-bottom: calc(10 / 16 * 1rem);
+
+		@media (width > 768px) {
+			margin-bottom: calc(24 / 16 * 1rem);
+		}
+	}
+}
