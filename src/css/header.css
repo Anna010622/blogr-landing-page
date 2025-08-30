@@ -18,7 +18,7 @@ header .container {
 
 	font-family: var(--ff-nav);
 
-	@media (width > 900px) {
+	@media (width > 1024px) {
 		display: block;
 	}
 }
@@ -138,7 +138,7 @@ header .container {
 	margin-left: auto;
 	gap: calc(20 / 16 * 1rem);
 
-	@media (width > 900px) {
+	@media (width > 1024px) {
 		display: flex;
 	}
 }
@@ -162,7 +162,7 @@ header .container {
 .mob-menu-toggle {
 	padding: calc(4 / 16 * 1rem);
 
-	@media (width > 900px) {
+	@media (width > 1024px) {
 		display: none;
 	}
 }

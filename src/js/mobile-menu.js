@@ -1,7 +1,7 @@
 const modal = document.querySelector('#mobile-menu');
 const toggleModalBtn = document.querySelector('[data-toggle-mob-menu');
 const body = document.querySelector('body');
-const media = window.matchMedia('(width > 768px)');
+const media = window.matchMedia('(width > 1024px)');
 
 toggleModalBtn.addEventListener('click', e => {
 	e.stopPropagation();
