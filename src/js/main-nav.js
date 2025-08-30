@@ -4,12 +4,6 @@ const nav = document.querySelector('#header-nav');
 let timer;
 
 for (let navItem of navItems) {
-	navItem.addEventListener('mouseover', () => {
-		for (let navItem of navItems) hideSubMenuContent(navItem);
-		showSubMenuContent(navItem);
-	});
-	navItem.addEventListener('mouseout', () => hideSubMenuContent(navItem, 500));
-
 	navItem.addEventListener('click', e => {
 		e.stopPropagation();
 
@@ -20,6 +14,16 @@ for (let navItem of navItems) {
 			showSubMenuContent(navItem);
 		}
 	});
+
+	if (window.matchMedia('(width >= 1280px)').matches) {
+		navItem.addEventListener('mouseover', () => {
+			for (let navItem of navItems) hideSubMenuContent(navItem);
+			showSubMenuContent(navItem);
+		});
+		navItem.addEventListener('mouseout', () =>
+			hideSubMenuContent(navItem, 500)
+		);
+	}
 }
 
 document.addEventListener('keydown', event => {
